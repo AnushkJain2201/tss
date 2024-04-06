@@ -15,6 +15,10 @@ public class Genre {
 
     }
 
+    public Genre(Integer genreId){
+        this.genreId = genreId;
+    }
+
     public Genre(Integer genreId, String name) {
         this.genreId = genreId;
         this.name = name;

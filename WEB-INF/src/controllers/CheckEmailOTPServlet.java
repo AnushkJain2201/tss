@@ -40,7 +40,9 @@ public class CheckEmailOTPServlet extends HttpServlet {
             String profileUploadLocation = getServletContext().getRealPath("/WEB-INF/uploads/" + user.getEmail());
 
             File profileFolder = new File(profileUploadLocation, "profile_pics");
+            File bookFolder = new File(profileUploadLocation, "book_pics");
             profileFolder.mkdir();
+            bookFolder.mkdir();
 
             nextPage = "login.jsp";
         }

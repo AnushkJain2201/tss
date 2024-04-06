@@ -16,6 +16,9 @@ const bioBtn = document.querySelector('#bio-btn');
 const editBioTextarea = document.querySelector('#edit-bio');
 const editBioBtn = document.querySelector('#edit-bio-btn');
 
+const bookPic = document.querySelector('#book-box');
+const inpBookPic = document.querySelector('#book-img');
+
 const sendBio = async () => {
     const response = await fetch(`save_bio.do?bio=${bioTextarea.value}`);
     const result = await response.text();
@@ -46,6 +49,11 @@ editBioBtn.addEventListener('click', () => {
             window.location.reload();
         }
     })
+});
+
+bookPic.addEventListener('click', function(e) {
+    e.preventDefault();
+    inpBookPic.click();
 })
 
 profilePic.addEventListener('click', function (e) {
